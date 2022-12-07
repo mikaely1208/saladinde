@@ -18,5 +18,7 @@ nav{
     padding: 0 20px;
 }
 
-/*.button-header{}*/
-
+#bol {
+    height: 80px;
+    margin-right: auto;
+}
