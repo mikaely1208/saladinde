@@ -1,48 +1,24 @@
 
 import './App.css';
 import React, { useState } from 'react';
-import Header from './header';
-import {StyleSheet, Text, View, TextInpput} from 'react';
+import {Routes, Route} from "react-router-dom"
+import Home from './components/home/home';
+import Accueil from './components/accueil/accueil';
+import Header from './components/Order/header';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`Bienvenu à Saladinde ${name}`)
-  }
   return (
-    <div className='info'>
-      <form onSubmit={handleSubmit}>
-
-        <label> <p>Tu t'appelles :</p>
-          <input 
-            type="text" 
-            value={name} 
-            onChange={(event) => setName(event.target.value)}
-          />
-        </label>
-    
-        <label> <p>et tu as :</p>
-          <input
-            type="text" 
-            value={age} 
-            onChange={(event) => setAge(event.target.value)}
-          />
-        </label>
-
-        <input id='submit'
-          type="submit" 
-          value="OK" 
-          />
-      </form>
-
-       tu es {name}, et tu as {age} ans
-
+    <div className='App'>
+      <Navbar/>
+      <Routes>
+        <Route  path='/' element={<Home/>}/>
+        <Route  path='/Accueil' element={<Accueil/>}/>
+        <Route  path='/Order' element={<Header/>}/>
+      </Routes>
+      
     </div>
-
-     
+    
     );
 }
 

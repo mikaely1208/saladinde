@@ -2,17 +2,6 @@ body{
   background-color: #a5c760 ;
 }
 
-.info {
+.App {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
- 
-}
-
-#submit {
-  transition-duration: 0.4s;
-}
-#submit:hover {
-  background-color: #4CAF50;
-  color: white;
 }
